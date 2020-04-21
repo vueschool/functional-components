@@ -1,0 +1,67 @@
+/* Inspired by https://codepen.io/alvaromontoro/pen/ebPEWb */
+
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+html,
+body {
+  background: #edf3ff;
+  font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 450px;
+  height: 250px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  /* overflow: hidden; */
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card .avatar img {
+  border-radius: 50%;
+  height: 6rem;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.card h1,
+.card h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.card p {
+  width: 260px;
+  float: right;
+  padding: 20px;
+  margin: 0;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(#667dff, #667dff);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
