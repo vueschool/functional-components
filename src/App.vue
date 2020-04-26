@@ -2,7 +2,11 @@
   <div id="app">
     <h1>User Card</h1>
     <div class="center">
-      <UserCard :user="user" />
+      <UserCard
+        :user="user"
+        @click.native="nameAlert(user.name)"
+        @contact="contactUser(user.name)"
+      />
     </div>
   </div>
 </template>
