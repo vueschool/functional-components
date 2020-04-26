@@ -25,6 +25,16 @@
       };
     },
 
+    methods: {
+      nameAlert(name) {
+        alert(`Clicked on ${name}`);
+      },
+
+      contactUser(name) {
+        alert(`Contacting ${name}`);
+      },
+    },
+
     components: {
       UserCard,
     },
