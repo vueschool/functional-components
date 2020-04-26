@@ -6,7 +6,11 @@
         :user="user"
         @click.native="nameAlert(user.name)"
         @contact="contactUser(user.name)"
-      />
+      >
+        <template #body
+          ><strong>{{ user.bio }}</strong></template
+        >
+      </UserCard>
     </div>
   </div>
 </template>
