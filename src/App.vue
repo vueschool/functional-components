@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <ListWrapper>
+    <ListWrapper listType="ul">
+      <li>Wonder Woman</li>
+      <li>Batman</li>
+      <li>Superman</li>
+      <li>Aquaman</li>
+    </ListWrapper>
+
+    <ListWrapper listType="ol">
       <li>Wonder Woman</li>
       <li>Batman</li>
       <li>Superman</li>
