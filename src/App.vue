@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <h1>User Card</h1>
+    <ListWrapper>
+      <li>Wonder Woman</li>
+      <li>Batman</li>
+      <li>Superman</li>
+      <li>Aquaman</li>
+    </ListWrapper>
+
+    <!-- <h1>User Card</h1>
     <div class="center">
       <UserCard
         :user="user"
@@ -11,12 +18,13 @@
           ><strong>{{ user.bio }}</strong></template
         >
       </UserCard>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-  import UserCard from './components/user-card';
+  // import UserCard from './components/user-card';
+  import ListWrapper from './components/list-wrapper';
 
   export default {
     name: 'App',
@@ -44,7 +52,8 @@
     },
 
     components: {
-      UserCard,
+      // UserCard,
+      ListWrapper,
     },
   };
 </script>
