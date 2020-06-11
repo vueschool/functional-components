@@ -1,25 +1,20 @@
 <template>
   <div id="app">
-    <UserAvatar />
-
-    <!-- <h1>User Card</h1>
+    <h1>User Card</h1>
     <div class="center">
       <UserCard
         :user="user"
         @click.native="nameAlert(user.name)"
         @contact="contactUser(user.name)"
       >
-        <template #body
-          ><strong>{{ user.bio }}</strong></template
-        >
+        <strong>{{ user.bio }}</strong>
       </UserCard>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
-  // import UserCard from './components/user-card';
-  import UserAvatar from './components/user-avatar';
+  import UserCard from './components/user-card';
 
   export default {
     name: 'App',
@@ -47,8 +42,7 @@
     },
 
     components: {
-      // UserCard,
-      UserAvatar,
+      UserCard,
     },
   };
 </script>
