@@ -1,22 +1,46 @@
-<template functional>
-  <div class="card" v-on="listeners">
-    <div class="additional">
-      <figure class="avatar">
-        <img :src="props.user.avatar" :alt="props.user.name" />
-        <button @click.stop="listeners.contact">Contact Me</button>
-      </figure>
-    </div>
-    <div class="more-info">
-      <h1>{{ props.user.name }}</h1>
-      <h3>{{ props.user.role }}</h3>
-      <p><slot name="body" /></p>
-    </div>
-  </div>
-</template>
-
 <script>
   export default {
     functional: true,
-    // render(h, context) {},
+    render(h, context) {
+      const figureBlock = h(
+        'figure',
+        {
+          class: 'avatar',
+        },
+        [
+          h('img', {
+            attrs: {
+              src: context.props.user.avatar,
+              alt: context.props.user.name,
+            },
+          }),
+          h(
+            'button',
+            {
+              on: {
+                click(e) {
+                  e.stopPropagation();
+                  context.listeners.contact();
+                },
+              },
+            },
+            'Contact Me'
+          ),
+        ]
+      );
+
+      const additionalBlock = h('div', { class: 'additional' }, [figureBlock]);
+
+      const moreInfoBlock = h('div', { class: 'more-info' }, [
+        h('h1', context.props.user.name),
+        h('h3', context.props.user.role),
+        h('p', context.children),
+      ]);
+
+      return h('div', { class: 'card', on: context.listeners }, [
+        additionalBlock,
+        moreInfoBlock,
+      ]);
+    },
   };
 </script>
